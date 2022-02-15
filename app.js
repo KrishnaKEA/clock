@@ -5,7 +5,7 @@ app.use(express.static(__dirname + "/public"));
 app.get("/", (req, res) => {
 	res.sendFile(`${__dirname}/public/index.html`);
 });
-
-app.listen(8081, (err) => {
+const port = Process.env.PORT || 3000;
+app.listen(port, (err) => {
 	console.log("Listening to the server at port number 8081");
 });
