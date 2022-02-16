@@ -25,9 +25,9 @@ const getDateAndDay = () => {
 	const day = now.getDay();
 	daydiv.innerHTML = `${dayNames[day - 1]}`;
 	const timediv = document.querySelector(".date");
-	timediv.innerHTML = `${now.getFullYear()}/${now.getMonth() + 1}/${
-		now.getDate() + 1
-	}`;
+	timediv.innerHTML = `${now.getFullYear()}/${
+		now.getMonth() + 1
+	}/${now.getDate()}`;
 };
 // updating the date and time in each second
 setInterval(() => {
